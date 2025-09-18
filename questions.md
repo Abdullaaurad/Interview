@@ -4348,3 +4348,2080 @@ Share specific examples of query optimization and indexing
 999. What is the Service Discovery pattern? Dynamic location and registration of services in distributed systems.
 
 1000. What is the Configuration Management pattern? Centralizing and versioning application configuration across environments.
+
+# Complete Java Interview Questions Guide - 600+ Questions
+
+## Table of Contents
+1. [Java Basics & Fundamentals (1-50)](#java-basics--fundamentals-1-50)
+2. [Object-Oriented Programming (51-100)](#object-oriented-programming-51-100)
+3. [String Manipulation (101-130)](#string-manipulation-101-130)
+4. [Collections Framework (131-180)](#collections-framework-131-180)
+5. [Exception Handling (181-210)](#exception-handling-181-210)
+6. [Multithreading & Concurrency (211-260)](#multithreading--concurrency-211-260)
+7. [Memory Management & JVM (261-290)](#memory-management--jvm-261-290)
+8. [Java 8+ Features (291-330)](#java-8-features-291-330)
+9. [Design Patterns (331-370)](#design-patterns-331-370)
+10. [Advanced Java Topics (371-420)](#advanced-java-topics-371-420)
+11. [Data Structures & Algorithms (421-470)](#data-structures--algorithms-421-470)
+12. [Best Practices & Code Quality (471-520)](#best-practices--code-quality-471-520)
+13. [Spring Framework (521-570)](#spring-framework-521-570)
+14. [Database & JDBC (571-600)](#database--jdbc-571-600)
+
+## Java Basics & Fundamentals (1-50)
+
+### 1. What is Java?
+**Answer:** Object-oriented, platform-independent, robust programming language developed by Sun Microsystems (now Oracle). Uses bytecode and JVM for portability.
+
+### 2. What are the features of Java?
+**Answer:** Platform independence, object-oriented, robust, secure, multithreaded, automatic memory management, simple syntax, distributed computing support.
+
+### 3. What is JVM?
+**Answer:** Java Virtual Machine - runtime environment that executes Java bytecode. Provides platform independence by abstracting underlying operating system.
+
+### 4. What is JRE?
+**Answer:** Java Runtime Environment - includes JVM, core libraries, and other components needed to run Java applications. Does not include development tools.
+
+### 5. What is JDK?
+**Answer:** Java Development Kit - complete development environment including JRE, compiler (javac), debugger, and other development tools.
+
+### 6. What is bytecode?
+**Answer:** Intermediate representation of Java source code after compilation. Platform-neutral code executed by JVM. Stored in .class files.
+
+### 7. What is platform independence in Java?
+**Answer:** "Write once, run anywhere" - Java programs can run on any platform with JVM without modification. Achieved through bytecode compilation.
+
+### 8. What is the difference between JDK, JRE, and JVM?
+**Answer:**
+- **JVM:** Runtime that executes bytecode
+- **JRE:** Runtime environment (JVM + libraries)
+- **JDK:** Development kit (JRE + development tools)
+
+### 9. What are Java identifiers?
+**Answer:** Names given to variables, methods, classes, packages. Rules: start with letter/underscore/$, can contain digits, case-sensitive, no keywords.
+
+### 10. What are Java keywords?
+**Answer:** Reserved words with special meaning: public, private, class, interface, static, final, abstract, synchronized, volatile, transient, etc.
+
+### 11. What are data types in Java?
+**Answer:** 
+- **Primitive:** byte, short, int, long, float, double, boolean, char
+- **Non-primitive:** Classes, interfaces, arrays
+
+### 12. What is the size of primitive data types?
+**Answer:**
+- **byte:** 1 byte (-128 to 127)
+- **short:** 2 bytes (-32,768 to 32,767)
+- **int:** 4 bytes (-2^31 to 2^31-1)
+- **long:** 8 bytes (-2^63 to 2^63-1)
+- **float:** 4 bytes
+- **double:** 8 bytes
+- **boolean:** 1 bit
+- **char:** 2 bytes (Unicode)
+
+### 13. What is type casting?
+**Answer:** Converting one data type to another. 
+- **Implicit (Widening):** Automatic conversion to larger type
+- **Explicit (Narrowing):** Manual conversion using cast operator
+
+### 14. What is autoboxing and unboxing?
+**Answer:**
+- **Autoboxing:** Automatic conversion of primitive to wrapper class
+- **Unboxing:** Automatic conversion of wrapper class to primitive
+
+### 15. What are wrapper classes?
+**Answer:** Classes that wrap primitive types: Byte, Short, Integer, Long, Float, Double, Boolean, Character. Provide utility methods and allow primitives in collections.
+
+### 16. What is the difference between == and equals()?
+**Answer:**
+- **==:** Compares references for objects, values for primitives
+- **equals():** Compares object content/values (if properly overridden)
+
+### 17. What are operators in Java?
+**Answer:** Arithmetic (+, -, *, /, %), relational (<, >, <=, >=, ==, !=), logical (&&, ||, !), bitwise (&, |, ^, ~), assignment (=, +=, -=).
+
+### 18. What is operator precedence?
+**Answer:** Rules determining order of operator evaluation. Higher precedence operators evaluated first. Use parentheses to override precedence.
+
+### 19. What are control statements?
+**Answer:** 
+- **Decision making:** if, if-else, switch
+- **Looping:** for, while, do-while, enhanced for
+- **Branching:** break, continue, return
+
+### 20. What is the difference between while and do-while?
+**Answer:**
+- **while:** Checks condition before execution (may not execute)
+- **do-while:** Executes once then checks condition (executes at least once)
+
+### 21. What is enhanced for loop?
+**Answer:** Simplified loop for iterating collections/arrays: `for(Type item : collection)`. Also called for-each loop.
+
+### 22. What are arrays in Java?
+**Answer:** Container objects holding fixed number of values of single type. Elements accessed by index. Declaration: `int[] arr = new int[5];`
+
+### 23. How to declare and initialize arrays?
+**Answer:**
+```java
+int[] arr1 = new int[5];                    // Declaration with size
+int[] arr2 = {1, 2, 3, 4, 5};             // Declaration with values
+int[] arr3 = new int[]{1, 2, 3, 4, 5};    // Alternative syntax
+```
+
+### 24. What are multidimensional arrays?
+**Answer:** Arrays of arrays. Example: `int[][] matrix = new int[3][4];` creates 3x4 matrix. Can have jagged arrays with different row sizes.
+
+### 25. What is the difference between length and length()?
+**Answer:**
+- **length:** Property of arrays returning number of elements
+- **length():** Method of String class returning number of characters
+
+### 26. What are methods in Java?
+**Answer:** Blocks of code performing specific tasks. Have return type, name, parameters. Enable code reusability and modularity.
+
+### 27. What is method overloading?
+**Answer:** Multiple methods with same name but different parameters (number, type, or order). Compile-time polymorphism.
+
+### 28. What are constructors?
+**Answer:** Special methods called when object is created. Same name as class, no return type. Initialize object state.
+
+### 29. What is constructor overloading?
+**Answer:** Multiple constructors with different parameters in same class. Allows different ways to initialize objects.
+
+### 30. What is the difference between constructor and method?
+**Answer:**
+- **Constructor:** No return type, same name as class, called automatically during object creation
+- **Method:** Has return type, any name, called explicitly
+
+### 31. What is this keyword?
+**Answer:** Reference to current object. Used to access instance variables/methods, call other constructors, resolve naming conflicts.
+
+### 32. What is super keyword?
+**Answer:** Reference to parent class. Used to access parent's variables/methods, call parent constructors, resolve method hiding.
+
+### 33. What is static keyword?
+**Answer:** Belongs to class rather than instance. Static variables/methods shared among all instances. Accessed using class name.
+
+### 34. What is final keyword?
+**Answer:**
+- **Variable:** Cannot be reassigned (constant)
+- **Method:** Cannot be overridden
+- **Class:** Cannot be extended
+
+### 35. What are access modifiers?
+**Answer:**
+- **public:** Accessible everywhere
+- **protected:** Accessible within package and subclasses
+- **default (package-private):** Accessible within package
+- **private:** Accessible within same class only
+
+### 36. What is the difference between public, private, protected, and default?
+**Answer:** Different levels of access control determining where class members can be accessed from. Controls encapsulation and security.
+
+### 37. What is a package?
+**Answer:** Namespace grouping related classes and interfaces. Provides access control and prevents naming conflicts. Example: `java.util`, `java.io`.
+
+### 38. How to create and use packages?
+**Answer:**
+```java
+package com.example.myapp;  // Package declaration (first line)
+import java.util.List;      // Import statement
+```
+
+### 39. What is import statement?
+**Answer:** Allows using classes from other packages without fully qualified names. Types: specific import, wildcard import, static import.
+
+### 40. What is classpath?
+**Answer:** Environment variable telling JVM where to find user-defined classes and packages. Set via -cp flag or CLASSPATH variable.
+
+### 41. What is the main method?
+**Answer:** Entry point of Java application. Signature: `public static void main(String[] args)`. JVM calls this method to start program execution.
+
+### 42. Why is main method static?
+**Answer:** JVM can call it without creating object instance. Static methods belong to class, not instance.
+
+### 43. Can we overload main method?
+**Answer:** Yes, we can overload main method, but JVM only calls the standard `main(String[] args)` method to start application.
+
+### 44. What are command line arguments?
+**Answer:** Arguments passed to program at runtime through String[] args parameter of main method. Accessed by index: args[0], args[1], etc.
+
+### 45. What is JIT compiler?
+**Answer:** Just-In-Time compiler that compiles frequently used bytecode to native machine code at runtime for better performance.
+
+### 46. What is garbage collection?
+**Answer:** Automatic memory management process that reclaims memory occupied by objects no longer referenced by application.
+
+### 47. What are different types of memory areas in JVM?
+**Answer:** Method Area, Heap (Young/Old Generation), Stack, PC Register, Native Method Stack.
+
+### 48. What is the difference between stack and heap memory?
+**Answer:**
+- **Stack:** Stores method calls, local variables, fast access, thread-specific
+- **Heap:** Stores objects, shared among threads, garbage collected
+
+### 49. What is WORA (Write Once Run Anywhere)?
+**Answer:** Java's platform independence feature. Code compiled to bytecode runs on any platform with JVM without modification.
+
+### 50. What are the advantages and disadvantages of Java?
+**Answer:**
+**Advantages:** Platform independent, object-oriented, robust, secure, multithreaded, automatic memory management
+**Disadvantages:** Slower than native code, memory consuming, verbose syntax, requires JVM
+
+---
+
+## Object-Oriented Programming (51-100)
+
+### 51. What is Object-Oriented Programming?
+**Answer:** Programming paradigm based on objects containing data (attributes) and code (methods). Key principles: encapsulation, inheritance, polymorphism, abstraction.
+
+### 52. What are the main principles of OOP?
+**Answer:**
+- **Encapsulation:** Bundling data and methods, hiding implementation details
+- **Inheritance:** Acquiring properties from parent class
+- **Polymorphism:** Many forms of same entity
+- **Abstraction:** Hiding complex implementation, showing only essential features
+
+### 53. What is a class?
+**Answer:** Blueprint or template for creating objects. Defines attributes (variables) and behaviors (methods) that objects will have.
+
+### 54. What is an object?
+**Answer:** Instance of a class. Contains actual values for class attributes and can invoke class methods.
+
+### 55. What is the difference between class and object?
+**Answer:**
+- **Class:** Template/blueprint, no memory allocated
+- **Object:** Instance of class, memory allocated, actual entity
+
+### 56. What is encapsulation?
+**Answer:** Wrapping data and methods into single unit (class) and hiding internal implementation. Achieved through access modifiers.
+
+### 57. How to achieve encapsulation in Java?
+**Answer:** Make instance variables private, provide public getter/setter methods, hide implementation details behind methods.
+
+### 58. What are getter and setter methods?
+**Answer:**
+- **Getter:** Returns value of private instance variable
+- **Setter:** Sets value of private instance variable with validation if needed
+
+### 59. What is inheritance?
+**Answer:** Mechanism where child class acquires properties and behaviors of parent class. Enables code reusability. Uses `extends` keyword.
+
+### 60. What are types of inheritance?
+**Answer:**
+- **Single:** One parent, one child
+- **Multilevel:** Chain of inheritance (A→B→C)
+- **Hierarchical:** One parent, multiple children
+- **Multiple:** Not supported in Java for classes (use interfaces)
+
+### 61. What is the IS-A relationship?
+**Answer:** Inheritance relationship where child class "is a" type of parent class. Example: Dog IS-A Animal.
+
+### 62. What is the HAS-A relationship?
+**Answer:** Composition/Aggregation relationship where class contains objects of other classes. Example: Car HAS-A Engine.
+
+### 63. What is polymorphism?
+**Answer:** Ability of objects to take multiple forms. Same interface, different implementations. Types: compile-time and runtime polymorphism.
+
+### 64. What are types of polymorphism?
+**Answer:**
+- **Compile-time (Static):** Method overloading, operator overloading
+- **Runtime (Dynamic):** Method overriding, achieved through inheritance
+
+### 65. What is method overriding?
+**Answer:** Child class providing specific implementation of method already defined in parent class. Must have same signature.
+
+### 66. What are the rules for method overriding?
+**Answer:** Same method signature, return type must be same or covariant, access modifier cannot be more restrictive, cannot override static/final/private methods.
+
+### 67. What is the difference between overloading and overriding?
+**Answer:**
+- **Overloading:** Same name, different parameters, compile-time
+- **Overriding:** Same signature, different implementation, runtime
+
+### 68. What is dynamic method dispatch?
+**Answer:** Runtime determination of which method to call based on actual object type, not reference type. Mechanism behind runtime polymorphism.
+
+### 69. What is abstraction?
+**Answer:** Hiding implementation complexity and showing only essential features. Achieved through abstract classes and interfaces.
+
+### 70. What is an abstract class?
+**Answer:** Class with `abstract` keyword that cannot be instantiated. Can have abstract methods (no implementation) and concrete methods.
+
+### 71. What is an abstract method?
+**Answer:** Method declared with `abstract` keyword without implementation. Must be implemented by non-abstract subclasses.
+
+### 72. What is an interface?
+**Answer:** Contract defining what methods a class must implement. Contains abstract methods (before Java 8) and default/static methods (Java 8+).
+
+### 73. What is the difference between abstract class and interface?
+**Answer:**
+- **Abstract class:** Can have concrete methods, constructors, instance variables, single inheritance
+- **Interface:** Only public abstract methods (before Java 8), multiple inheritance, no instance variables
+
+### 74. Can interface have constructors?
+**Answer:** No, interfaces cannot have constructors because they cannot be instantiated.
+
+### 75. What are default methods in interface (Java 8)?
+**Answer:** Methods with default implementation in interface using `default` keyword. Allows adding new methods without breaking existing implementations.
+
+### 76. What are static methods in interface (Java 8)?
+**Answer:** Methods belonging to interface, not implementing class. Called using interface name. Cannot be overridden.
+
+### 77. Can interface have variables?
+**Answer:** Yes, but they are implicitly `public`, `static`, and `final` (constants). Must be initialized at declaration.
+
+### 78. What is multiple inheritance?
+**Answer:** Class inheriting from multiple parent classes. Not supported for classes in Java (diamond problem), but supported for interfaces.
+
+### 79. Why doesn't Java support multiple inheritance for classes?
+**Answer:** Diamond problem - ambiguity when multiple parent classes have same method. Java uses interfaces to achieve multiple inheritance safely.
+
+### 80. What is composition?
+**Answer:** Design principle where class contains objects of other classes as instance variables. "Has-a" relationship.
+
+### 81. What is aggregation?
+**Answer:** Special form of association where objects have independent lifecycle. Weaker relationship than composition.
+
+### 82. What is the difference between composition and aggregation?
+**Answer:**
+- **Composition:** Strong relationship, child cannot exist without parent
+- **Aggregation:** Weak relationship, child can exist independently
+
+### 83. What is association?
+**Answer:** Relationship between two classes where objects of one class are connected to objects of another class.
+
+### 84. What are the benefits of OOP?
+**Answer:** Code reusability, modularity, maintainability, flexibility, security through encapsulation, real-world modeling.
+
+### 85. What is coupling?
+**Answer:** Degree of dependency between classes. 
+- **Tight coupling:** High dependency (bad)
+- **Loose coupling:** Low dependency (good)
+
+### 86. What is cohesion?
+**Answer:** How closely related and focused class responsibilities are. High cohesion means class has single, well-defined purpose.
+
+### 87. What is constructor chaining?
+**Answer:** Calling one constructor from another constructor using `this()` or `super()`. Must be first statement in constructor.
+
+### 88. What is instance initialization block?
+**Answer:** Block of code executed every time object is created, before constructor. Used for common initialization code.
+
+### 89. What is static initialization block?
+**Answer:** Block executed when class is first loaded. Used to initialize static variables or perform class-level setup.
+
+### 90. What is the object lifecycle in Java?
+**Answer:** Creation (new keyword) → Initialization (constructor) → Usage → Dereferencing → Garbage Collection.
+
+### 91. What is instanceof operator?
+**Answer:** Tests whether object is instance of specific class or interface. Returns boolean. Used for type checking before casting.
+
+### 92. What is type casting in OOP?
+**Answer:**
+- **Upcasting:** Child to parent reference (automatic)
+- **Downcasting:** Parent to child reference (explicit, may throw ClassCastException)
+
+### 93. What is method hiding?
+**Answer:** When child class defines static method with same signature as parent class static method. Parent method is hidden, not overridden.
+
+### 94. What is variable hiding?
+**Answer:** When child class declares variable with same name as parent class variable. Parent variable is hidden in child class scope.
+
+### 95. What is the difference between method overriding and method hiding?
+**Answer:**
+- **Overriding:** Instance methods, dynamic dispatch, polymorphic behavior
+- **Hiding:** Static methods/variables, resolved at compile time
+
+### 96. What is covariant return type?
+**Answer:** Override method can return subtype of parent method's return type. Supported since Java 5.
+
+### 97. What is early binding and late binding?
+**Answer:**
+- **Early binding:** Method resolution at compile time (static, private, final methods)
+- **Late binding:** Method resolution at runtime (virtual method invocation)
+
+### 98. What are nested classes?
+**Answer:** Classes defined inside other classes. Types: static nested, inner (non-static), local, anonymous.
+
+### 99. What is the difference between static and non-static nested classes?
+**Answer:**
+- **Static nested:** Cannot access non-static members of outer class directly
+- **Non-static (inner):** Can access all members of outer class, needs outer class instance
+
+### 100. What are anonymous classes?
+**Answer:** Classes defined and instantiated at same time without name. Often used for event handling or implementing interfaces/abstract classes inline.
+
+---
+
+## String Manipulation (101-130)
+
+### 101. What is String in Java?
+**Answer:** Immutable sequence of characters representing text. String objects stored in heap memory, literals in string pool.
+
+### 102. Why are strings immutable in Java?
+**Answer:** Security (used in network connections, file paths), thread safety, performance (caching hashcode), string pool efficiency.
+
+### 103. What is String pool?
+**Answer:** Special memory area in heap storing unique string literals. JVM optimizes memory by reusing identical string literals.
+
+### 104. What is the difference between String, StringBuffer, and StringBuilder?
+**Answer:**
+- **String:** Immutable, thread-safe, slow for concatenation
+- **StringBuffer:** Mutable, thread-safe (synchronized), moderate performance
+- **StringBuilder:** Mutable, not thread-safe, best performance for single thread
+
+### 105. How to create String objects?
+**Answer:**
+```java
+String str1 = "Hello";           // String literal (pool)
+String str2 = new String("Hello"); // New object (heap)
+```
+
+### 106. What is the difference between String literal and new String()?
+**Answer:**
+- **String literal:** Stored in string pool, reused if exists
+- **new String():** Creates new object in heap memory always
+
+### 107. What are important String methods?
+**Answer:** length(), charAt(), substring(), indexOf(), contains(), equals(), equalsIgnoreCase(), split(), trim(), replace(), toLowerCase(), toUpperCase().
+
+### 108. How to compare strings in Java?
+**Answer:**
+- **equals():** Content comparison (recommended)
+- **==:** Reference comparison
+- **compareTo():** Lexicographical comparison, returns int
+- **equalsIgnoreCase():** Case-insensitive comparison
+
+### 109. What is intern() method?
+**Answer:** Returns canonical representation of string from string pool. If string exists in pool, returns existing reference; otherwise adds to pool.
+
+### 110. How to reverse a string?
+**Answer:**
+```java
+StringBuilder sb = new StringBuilder(str);
+String reversed = sb.reverse().toString();
+```
+
+### 111. How to check if string is palindrome?
+**Answer:**
+```java
+public boolean isPalindrome(String str) {
+    String cleaned = str.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+    return cleaned.equals(new StringBuilder(cleaned).reverse().toString());
+}
+```
+
+### 112. How to count occurrences of character in string?
+**Answer:**
+```java
+public int countChar(String str, char ch) {
+    return (int) str.chars().filter(c -> c == ch).count();
+}
+```
+
+### 113. What is string concatenation?
+**Answer:** Joining two or more strings. Methods: + operator, concat(), StringBuilder/StringBuffer append().
+
+### 114. Which is better for string concatenation?
+**Answer:** StringBuilder for multiple concatenations, + operator for simple cases (compiler optimizes), concat() for two strings.
+
+### 115. What happens when you concatenate strings with + operator?
+**Answer:** Compiler optimizes using StringBuilder for multiple concatenations in single expression. Creates new String objects for each operation otherwise.
+
+### 116. How to split a string?
+**Answer:**
+```java
+String[] parts = str.split(",");        // Split by comma
+String[] words = str.split("\\s+");     // Split by whitespace
+```
+
+### 117. How to join string arrays?
+**Answer:**
+```java
+String joined = String.join(",", stringArray);
+// Or using StringBuilder for custom logic
+```
+
+### 118. What are regular expressions?
+**Answer:** Pattern matching language for searching, matching, and manipulating text. Java provides Pattern and Matcher classes.
+
+### 119. How to use regex with strings?
+**Answer:**
+```java
+str.matches("\\d+");           // Check if string matches pattern
+str.replaceAll("\\d", "*");    // Replace all digits with *
+Pattern.compile("\\w+").matcher(str).find(); // Find pattern
+```
+
+### 120. What is the difference between String replace() and replaceAll()?
+**Answer:**
+- **replace():** Replaces literal characters/sequences
+- **replaceAll():** Uses regex patterns for replacement
+
+### 121. How to convert string to different data types?
+**Answer:**
+```java
+int num = Integer.parseInt(str);
+double d = Double.parseDouble(str);
+boolean b = Boolean.parseBoolean(str);
+```
+
+### 122. How to convert other data types to string?
+**Answer:**
+```java
+String str = String.valueOf(123);
+String str2 = Integer.toString(123);
+String str3 = "" + 123; // Concatenation
+```
+
+### 123. What is StringTokenizer?
+**Answer:** Legacy class for breaking string into tokens based on delimiters. Replaced by String.split() in modern Java.
+
+### 124. How to handle null strings safely?
+**Answer:**
+```java
+Objects.equals(str1, str2);    // Null-safe comparison
+Optional.ofNullable(str).orElse("default"); // Default value
+str != null && str.isEmpty();   // Check null first
+```
+
+### 125. What is string formatting?
+**Answer:** Creating formatted strings using placeholders. Methods: String.format(), printf(), MessageFormat.
+
+### 126. How to format strings in Java?
+**Answer:**
+```java
+String formatted = String.format("Hello %s, age %d", name, age);
+System.out.printf("Value: %.2f%n", value);
+```
+
+### 127. What are escape sequences in strings?
+**Answer:** Special character combinations: \n (newline), \t (tab), \\ (backslash), \" (quote), \' (apostrophe), \r (carriage return).
+
+### 128. How to handle multi-line strings?
+**Answer:** Use StringBuilder, text blocks (Java 13+), or concatenation:
+```java
+String multiline = """
+    Line 1
+    Line 2
+    Line 3
+    """; // Text blocks (Java 13+)
+```
+
+### 129. What is the performance difference between string operations?
+**Answer:** String concatenation creates new objects (slow), StringBuilder modifies internal buffer (fast), StringBuffer adds synchronization overhead.
+
+### 130. How to optimize string operations?
+**Answer:** Use StringBuilder for multiple concatenations, cache frequently used strings, use string pool effectively, avoid unnecessary string creation.
+
+---
+
+## Collections Framework (131-180)
+
+### 131. What is Java Collections Framework?
+**Answer:** Unified architecture providing interfaces, implementations, and algorithms for storing and manipulating groups of objects. Located in java.util package.
+
+### 132. What are the core interfaces in Collections Framework?
+**Answer:** Collection, List, Set, Queue, Deque, Map. Collection is root interface, Map is separate hierarchy.
+
+### 133. What is the difference between Collection and Collections?
+**Answer:**
+- **Collection:** Root interface of Collections Framework
+- **Collections:** Utility class providing static methods for collection operations
+
+### 134. What is the hierarchy of Collection interface?
+**Answer:** Collection → List, Set, Queue → Deque. Map is separate. Each has multiple implementations.
+
+### 135. What is List interface?
+**Answer:** Ordered collection allowing duplicates. Elements accessed by index. Implementations: ArrayList, LinkedList, Vector.
+
+### 136. What is ArrayList?
+**Answer:** Resizable array implementation of List. Dynamic size, indexed access, allows duplicates and null values.
+
+### 137. What is the internal working of ArrayList?
+**Answer:** Uses dynamic array, default capacity 10, grows by 50% when full, maintains insertion order, allows random access.
+
+### 138. What is LinkedList?
+**Answer:** Doubly-linked list implementation of List and Deque. Good for frequent insertions/deletions, implements Queue interface.
+
+### 139. What is the difference between ArrayList and LinkedList?
+**Answer:**
+- **ArrayList:** Fast random access O(1), slow insertion/deletion O(n)
+- **LinkedList:** Slow random access O(n), fast insertion/deletion O(1)
+
+### 140. When to use ArrayList vs LinkedList?
+**Answer:**
+- **ArrayList:** More reads, random access needed
+- **LinkedList:** Frequent insertions/deletions, queue operations
+
+### 141. What is Vector?
+**Answer:** Legacy synchronized dynamic array, similar to ArrayList but thread-safe. Performance overhead due to synchronization.
+
+### 142. What is the difference between ArrayList and Vector?
+**Answer:**
+- **ArrayList:** Not synchronized, faster, introduced in Java 1.2
+- **Vector:** Synchronized, slower, legacy class from Java 1.0
+
+### 143. What is Set interface?
+**Answer:** Collection that cannot contain duplicate elements. Implementations: HashSet, LinkedHashSet, TreeSet.
+
+### 144. What is HashSet?
+**Answer:** Hash table implementation of Set. No duplicates, no ordering, allows one null, O(1) basic operations.
+
+### 145. How does HashSet work internally?
+**Answer:** Uses HashMap internally with elements as keys and dummy object as value. Uses hashCode() and equals() to determine uniqueness.
+
+### 146. What is LinkedHashSet?
+**Answer:** Hash table with linked list maintaining insertion order. Combines HashSet's performance with predictable iteration order.
+
+### 147. What is TreeSet?
+**Answer:** NavigableSet implementation using Red-Black tree. Sorted order, no null elements, O(log n) operations.
+
+### 148. What is the difference between HashSet, LinkedHashSet, and TreeSet?
+**Answer:**
+- **HashSet:** No ordering, fastest
+- **LinkedHashSet:** Insertion order, moderate performance
+- **TreeSet:** Sorted order, slowest, implements NavigableSet
+
+### 149. What is Map interface?
+**Answer:** Object mapping keys to values, no duplicate keys, each key maps to at most one value. Not part of Collection hierarchy.
+
+### 150. What is HashMap?
+**Answer:** Hash table implementation of Map. Key-value pairs, allows null key/values, no ordering, O(1) basic operations.
+
+### 151. How does HashMap work internally?
+**Answer:** Uses array of buckets, hash function determines bucket, collision handling with chaining (linked list/tree), dynamic resizing.
+
+### 152. What is hash collision and how is it handled?
+**Answer:** When different keys have same hash code. Handled by chaining (linked list) or open addressing. Java 8+ uses trees for long chains.
+
+### 153. What is load factor in HashMap?
+**Answer:** Measure of how full HashMap can get before resizing. Default 0.75 (75%). Higher values save space but increase collision probability.
+
+### 154. When does HashMap resize?
+**Answer:** When number of entries exceeds threshold (capacity × load factor). New capacity is double, elements rehashed.
+
+### 155. What is LinkedHashMap?
+**Answer:** Hash table with doubly-linked list maintaining insertion/access order. Extends HashMap with predictable iteration order.
+
+### 156. What is TreeMap?
+**Answer:** Red-Black tree implementation of NavigableMap. Sorted by keys, O(log n) operations, implements SortedMap.
+
+### 157. What is Hashtable?
+**Answer:** Legacy synchronized hash table, similar to HashMap but thread-safe, no null keys/values, extends Dictionary class.
+
+### 158. What is the difference between HashMap and Hashtable?
+**Answer:**
+- **HashMap:** Not synchronized, allows null, faster, introduced in Java 1.2
+- **Hashtable:** Synchronized, no null, slower, legacy from Java 1.0
+
+### 159. What is ConcurrentHashMap?
+**Answer:** Thread-safe HashMap alternative using segment-based locking. Better performance than Hashtable for concurrent access.
+
+### 160. What is Queue interface?
+**Answer:** Collection designed for holding elements prior to processing. FIFO order typically. Methods: offer(), poll(), peek().
+
+### 161. What is Deque interface?
+**Answer:** Double-ended queue supporting insertion/removal at both ends. Extends Queue interface. Can be used as stack or queue.
+
+### 162. What is PriorityQueue?
+**Answer:** Heap-based priority queue. Elements ordered by natural ordering or Comparator. Not thread-safe.
+
+### 163. What is ArrayDeque?
+**Answer:** Resizable array implementation of Deque. More efficient than Stack for stack operations and LinkedList for queue operations.
+
+### 164. What are the differences between Iterator and ListIterator?
+**Answer:**
+- **Iterator:** Forward-only, all collections, remove() method
+- **ListIterator:** Bidirectional, only for lists, add(), set(), remove() methods
+
+### 165. What is fail-fast and fail-safe iterator?
+**Answer:**
+- **Fail-fast:** Throws ConcurrentModificationException if collection modified during iteration
+- **Fail-safe:** Works on copy, no exception but may not reflect recent changes
+
+### 166. What is ConcurrentModificationException?
+**Answer:** Runtime exception thrown when collection is modified while iterating using fail-fast iterator.
+
+### 167. How to avoid ConcurrentModificationException?
+**Answer:** Use Iterator.remove(), synchronize access, use concurrent collections, or use for-each loop carefully.
+
+### 168. What are concurrent collections?
+**Answer:** Thread-safe collections: ConcurrentHashMap, CopyOnWriteArrayList, ConcurrentLinkedQueue, BlockingQueue implementations.
+
+### 169. What is the difference between synchronized and concurrent collections?
+**Answer:**
+- **Synchronized:** External synchronization, poor performance, fail-fast
+- **Concurrent:** Internal synchronization, better performance, fail-safe
+
+### 170. What is Comparable interface?
+**Answer:** Interface for objects that can be compared for ordering. Defines natural ordering through compareTo() method.
+
+### 171. What is Comparator interface?
+**Answer:** Functional interface defining custom comparison logic. Used when natural ordering not suitable or class doesn't implement Comparable.
+
+### 172. What is the difference between Comparable and Comparator?
+**Answer:**
+- **Comparable:** Natural ordering, single comparison logic, compareTo() method
+- **Comparator:** Custom ordering, multiple comparison logic, compare() method
+
+### 173. How to sort collections?
+**Answer:**
+```java
+Collections.sort(list);                    // Natural ordering
+Collections.sort(list, comparator);        // Custom ordering
+list.sort(comparator);                     // Instance method
+```
+
+### 174. What are utility methods in Collections class?
+**Answer:** sort(), reverse(), shuffle(), min(), max(), binarySearch(), frequency(), disjoint(), copy(), fill().
+
+### 175. What is the difference between peek() and poll() in Queue?
+**Answer:**
+- **peek():** Returns head element without removing, returns null if empty
+- **poll():** Returns and removes head element, returns null if empty
+
+### 176. What is the difference between remove() and poll() in Queue?
+**Answer:**
+- **remove():** Throws exception if queue is empty
+- **poll():** Returns null if queue is empty
+
+### 177. What are blocking queues?
+**Answer:** Thread-safe queues that block when full (put operations) or empty (take operations). Used in producer-consumer scenarios.
+
+### 178. What are some implementations of BlockingQueue?
+**Answer:** ArrayBlockingQueue, LinkedBlockingQueue, PriorityBlockingQueue, SynchronousQueue, DelayQueue.
+
+### 179. What is the difference between Array and ArrayList?
+**Answer:**
+- **Array:** Fixed size, can store primitives, faster access, no built-in methods
+- **ArrayList:** Dynamic size, only objects, convenient methods, implements List interface
+
+### 180. How to convert Array to List and vice versa?
+**Answer:**
+```java
+// Array to List
+List<String> list = Arrays.asList(array);
+List<String> list2 = new ArrayList<>(Arrays.asList(array));
+
+// List to Array
+String[] array = list.toArray(new String[0]);
+```
+
+---
+
+## Exception Handling (181-210)
+
+### 181. What is an exception?
+**Answer:** Abnormal condition that occurs during program execution, disrupting normal flow. Objects representing error conditions.
+
+### 182. What is exception handling?
+**Answer:** Mechanism to handle runtime errors gracefully, allowing program to continue execution or terminate gracefully.
+
+### 183. What is the exception hierarchy in Java?
+**Answer:** Throwable → Error/Exception → RuntimeException/Checked Exceptions. Error and RuntimeException are unchecked.
+
+### 184. What is the difference between Error and Exception?
+**Answer:**
+- **Error:** Serious problems that applications shouldn't try to catch (OutOfMemoryError, StackOverflowError)
+- **Exception:** Conditions applications might want to catch and handle
+
+### 185. What are checked and unchecked exceptions?
+**Answer:**
+- **Checked:** Compile-time checking required, must handle or declare (IOException, SQLException)
+- **Unchecked:** Runtime exceptions, not required to handle (NullPointerException, ArrayIndexOutOfBoundsException)
+
+### 186. What are the keywords used in exception handling?
+**Answer:** try, catch, finally, throw, throws.
+
+### 187. What is try-catch block?
+**Answer:**
+```java
+try {
+    // Code that may throw exception
+} catch (ExceptionType e) {
+    // Handle exception
+}
+```
+
+### 188. Can we have multiple catch blocks?
+**Answer:** Yes, to handle different types of exceptions. Specific exceptions should be caught before general ones.
+
+### 189. What is finally block?
+**Answer:** Block that always executes regardless of exception occurrence. Used for cleanup operations like closing resources.
+
+### 190. When is finally block not executed?
+**Answer:** System.exit(), JVM crash, infinite loops, or thread interruption before reaching finally.
+
+### 191. What is try-with-resources?
+**Answer:** Automatic resource management introduced in Java 7. Resources implementing AutoCloseable are automatically closed.
+
+### 192. What is the difference between throw and throws?
+**Answer:**
+- **throw:** Used to explicitly throw exception from code
+- **throws:** Declares exceptions that method might throw, used in method signature
+
+### 193. Can we rethrow exceptions?
+**Answer:** Yes, catch exception and throw it again (same or wrapped in different exception) for logging or transformation purposes.
+
+### 194. What is exception propagation?
+**Answer:** When exception is not handled in current method, it propagates up the call stack until handled or reaches main method.
+
+### 195. What is custom exception?
+**Answer:** User-defined exception class extending Exception or RuntimeException to represent specific error conditions.
+
+### 196. How to create custom exceptions?
+**Answer:**
+```java
+class MyException extends Exception {
+    public MyException(String message) {
+        super(message);
+    }
+}
+```
+
+### 197. What are common runtime exceptions?
+**Answer:** NullPointerException, ArrayIndexOutOfBoundsException, IllegalArgumentException, ClassCastException, NumberFormatException.
+
+### 198. What are common checked exceptions?
+**Answer:** IOException, FileNotFoundException, SQLException, ClassNotFoundException, InterruptedException.
+
+### 199. What is NullPointerException?
+**Answer:** Runtime exception thrown when trying to access object reference that points to null.
+
+### 200. How to avoid NullPointerException?
+**Answer:** Null checks, Optional class, defensive programming, initialize variables properly, use annotations like @Nullable/@NonNull.
+
+### 201. What is try-catch-finally execution order?
+**Answer:** try → catch (if exception) → finally. Finally executes even if try/catch has return statement.
+
+### 202. Can catch block have return statement?
+**Answer:** Yes, but finally block still executes after catch return. If finally also has return, it overrides catch return.
+
+### 203. What is exception chaining?
+**Answer:** Associating one exception with another to preserve stack trace information. Use initCause() or constructor with cause parameter.
+
+### 204. What is suppressed exception?
+**Answer:** Exception suppressed when another exception occurs in try-with-resources. Access using getSuppressed() method.
+
+### 205. What are best practices for exception handling?
+**Answer:** Be specific, don't catch and ignore, clean up resources, log exceptions, fail-fast, don't use exceptions for control flow.
+
+### 206. What is the difference between Exception and RuntimeException?
+**Answer:**
+- **Exception:** Checked exception (except RuntimeException subtypes)
+- **RuntimeException:** Unchecked exception, programming errors
+
+### 207. Can we override method and change exception specification?
+**Answer:** Overriding method can throw same, subtype, or no exception. Cannot throw new or broader checked exceptions.
+
+### 208. What happens if exception occurs in finally block?
+**Answer:** Exception in finally suppresses exception from try block. Original exception becomes suppressed exception.
+
+### 209. What is AutoCloseable interface?
+**Answer:** Interface with close() method for automatic resource management in try-with-resources. Implemented by resources needing cleanup.
+
+### 210. What is the difference between final, finally, and finalize?
+**Answer:**
+- **final:** Keyword for constants, preventing inheritance/overriding
+- **finally:** Block always executed in exception handling
+- **finalize:** Method called by garbage collector before object destruction
+
+---
+
+## Multithreading & Concurrency (211-260)
+
+### 211. What is multithreading?
+**Answer:** Concurrent execution of multiple threads within single process. Enables parallel processing and better resource utilization.
+
+### 212. What is a thread?
+**Answer:** Lightweight subprocess, smallest unit of processing. Threads share memory space but have separate execution paths.
+
+### 213. What is the difference between process and thread?
+**Answer:**
+- **Process:** Independent execution environment with separate memory space
+- **Thread:** Shares memory space within process, lighter weight
+
+### 214. What are the advantages of multithreading?
+**Answer:** Better resource utilization, improved performance, responsiveness, parallelism, better user experience.
+
+### 215. What are the ways to create threads in Java?
+**Answer:** 
+1. Extend Thread class
+2. Implement Runnable interface
+3. Implement Callable interface (with ExecutorService)
+
+### 216. What is the difference between extending Thread class and implementing Runnable?
+**Answer:**
+- **Thread class:** Single inheritance limitation, tight coupling
+- **Runnable interface:** Multiple inheritance possible, better design, separation of concerns
+
+### 217. What is the life cycle of a thread?
+**Answer:** NEW → RUNNABLE → BLOCKED/WAITING/TIMED_WAITING → TERMINATED.
+
+### 218. What are thread states in Java?
+**Answer:**
+- **NEW:** Created but not started
+- **RUNNABLE:** Executing or ready to execute
+- **BLOCKED:** Waiting for monitor lock
+- **WAITING:** Waiting indefinitely for another thread
+- **TIMED_WAITING:** Waiting for specified time
+- **TERMINATED:** Execution completed
+
+### 219. What are the important methods in Thread class?
+**Answer:** start(), run(), sleep(), join(), interrupt(), yield(), isAlive(), getName(), setName(), getPriority(), setPriority().
+
+### 220. What is the difference between start() and run() methods?
+**Answer:**
+- **start():** Creates new thread and calls run() method
+- **run():** Executes in current thread, no new thread created
+
+### 221. What is join() method?
+**Answer:** Makes current thread wait until the thread on which join() is called terminates. Used for thread synchronization.
+
+### 222. What is sleep() method?
+**Answer:** Makes current thread pause execution for specified time. Thread remains in TIMED_WAITING state.
+
+### 223. What is yield() method?
+**Answer:** Suggests thread scheduler to give chance to other threads of same priority. No guarantee of execution order.
+
+### 224. What is thread priority?
+**Answer:** Numeric value (1-10) indicating thread importance. Higher priority threads get preference, but not guaranteed.
+
+### 225. What are default thread priorities?
+**Answer:** MIN_PRIORITY = 1, NORM_PRIORITY = 5 (default), MAX_PRIORITY = 10.
+
+### 226. What is daemon thread?
+**Answer:** Service thread that doesn't prevent JVM from exiting. JVM terminates when only daemon threads are running.
+
+### 227. What is the difference between user thread and daemon thread?
+**Answer:**
+- **User thread:** Prevents JVM from exiting
+- **Daemon thread:** Doesn't prevent JVM from exiting, background service threads
+
+### 228. What is synchronization?
+**Answer:** Controlling access to shared resources by multiple threads to prevent data inconsistency and race conditions.
+
+### 229. Why is synchronization needed?
+**Answer:** To prevent race conditions, ensure data consistency, coordinate thread access to shared resources.
+
+### 230. What are the ways to achieve synchronization?
+**Answer:** synchronized methods, synchronized blocks, volatile keyword, locks, atomic classes.
+
+### 231. What is synchronized keyword?
+**Answer:** Provides mutual exclusion access to shared resources. Can be applied to methods or code blocks.
+
+### 232. What is the difference between synchronized method and synchronized block?
+**Answer:**
+- **Method:** Entire method is synchronized, uses object lock
+- **Block:** Only specific code is synchronized, can specify different locks
+
+### 233. What is monitor/intrinsic lock?
+**Answer:** Synchronization mechanism where each object has associated monitor. Thread must acquire monitor to execute synchronized code.
+
+### 234. What is volatile keyword?
+**Answer:** Ensures variable changes are visible to all threads immediately. Prevents caching in thread-local memory.
+
+### 235. What is the difference between synchronized and volatile?
+**Answer:**
+- **synchronized:** Mutual exclusion, atomicity, visibility
+- **volatile:** Only visibility, no atomicity for compound operations
+
+### 236. What is race condition?
+**Answer:** Undesirable situation when multiple threads access shared resource concurrently and outcome depends on timing.
+
+### 237. What is deadlock?
+**Answer:** Situation where two or more threads are blocked forever, each waiting for resource held by another.
+
+### 238. How to prevent deadlock?
+**Answer:** Avoid nested locks, acquire locks in same order, use timeout, avoid indefinite waits.
+
+### 239. What is livelock?
+**Answer:** Threads are not blocked but keep changing states in response to other threads without making progress.
+
+### 240. What is starvation?
+**Answer:** Thread is unable to gain regular access to shared resources and cannot make progress.
+
+### 241. What is thread pool?
+**Answer:** Collection of pre-created threads that can be reused to execute tasks. Reduces overhead of creating/destroying threads.
+
+### 242. What is ExecutorService?
+**Answer:** High-level interface for managing and executing threads. Provides thread pool implementations and task submission methods.
+
+### 243. What are types of thread pools?
+**Answer:**
+- **FixedThreadPool:** Fixed number of threads
+- **CachedThreadPool:** Creates threads as needed
+- **SingleThreadExecutor:** Single worker thread
+- **ScheduledThreadPool:** Scheduled/periodic tasks
+
+### 244. What is Future interface?
+**Answer:** Represents result of asynchronous computation. Provides methods to check completion, retrieve result, cancel execution.
+
+### 245. What is Callable interface?
+**Answer:** Similar to Runnable but can return value and throw checked exceptions. Used with ExecutorService.
+
+### 246. What is the difference between Runnable and Callable?
+**Answer:**
+- **Runnable:** void run(), cannot return value or throw checked exceptions
+- **Callable:** V call(), can return value and throw exceptions
+
+### 247. What is CompletableFuture?
+**Answer:** Future implementation providing functional programming capabilities for asynchronous programming with method chaining.
+
+### 248. What are locks in Java?
+**Answer:** Synchronization mechanisms providing more flexibility than synchronized keyword. Located in java.util.concurrent.locks package.
+
+### 249. What is ReentrantLock?
+**Answer:** Lock implementation that can be acquired multiple times by same thread. Provides fairness policy and try-lock functionality.
+
+### 250. What is the difference between synchronized and ReentrantLock?
+**Answer:**
+- **synchronized:** Implicit, automatic release, no fairness control
+- **ReentrantLock:** Explicit, manual release, fairness control, try-lock, interruptible
+
+### 251. What is ReadWriteLock?
+**Answer:** Lock allowing multiple readers or single writer. Improves performance when reads are more frequent than writes.
+
+### 252. What are atomic classes?
+**Answer:** Thread-safe classes providing atomic operations without synchronization. Examples: AtomicInteger, AtomicBoolean, AtomicReference.
+
+### 253. What is CAS (Compare and Swap)?
+**Answer:** Atomic operation that compares memory location with expected value and updates if match. Foundation of lock-free programming.
+
+### 254. What is wait() and notify() methods?
+**Answer:**
+- **wait():** Makes thread wait until notified
+- **notify():** Wakes up single waiting thread
+- **notifyAll():** Wakes up all waiting threads
+
+### 255. What is the difference between wait() and sleep()?
+**Answer:**
+- **wait():** Releases lock, must be called in synchronized context
+- **sleep():** Doesn't release lock, can be called anywhere
+
+### 256. What is producer-consumer problem?
+**Answer:** Classic synchronization problem where producers generate data and consumers process it. Requires coordination to avoid race conditions.
+
+### 257. What is BlockingQueue?
+**Answer:** Thread-safe queue that blocks when full (put) or empty (take). Ideal for producer-consumer scenarios.
+
+### 258. What is CountDownLatch?
+**Answer:** Synchronization aid allowing threads to wait until set of operations complete. Count decrements with each completion.
+
+### 259. What is CyclicBarrier?
+**Answer:** Synchronization point where threads wait for each other. Barrier is reset after all threads reach it.
+
+### 260. What is Semaphore?
+**Answer:** Maintains set of permits controlling access to resource pool. acquire() and release() methods manage permits.
+
+---
+
+## Memory Management & JVM (261-290)
+
+### 261. What is JVM architecture?
+**Answer:** Class Loader Subsystem, Runtime Data Areas (Method Area, Heap, Stack, PC Register, Native Method Stack), Execution Engine.
+
+### 262. What are the components of JVM?
+**Answer:** Class Loader, Memory Areas, Execution Engine (Interpreter, JIT Compiler), Native Method Interface, Garbage Collector.
+
+### 263. What is class loading in JVM?
+**Answer:** Process of loading, linking, and initializing classes. Performed by class loaders in hierarchical manner.
+
+### 264. What are the phases of class loading?
+**Answer:**
+- **Loading:** Reading class file and creating Class object
+- **Linking:** Verification, preparation, resolution
+- **Initialization:** Executing static initializers
+
+### 265. What are types of class loaders?
+**Answer:**
+- **Bootstrap:** Loads core Java classes (rt.jar)
+- **Extension/Platform:** Loads extension classes
+- **System/Application:** Loads application classes from classpath
+
+### 266. What is parent delegation model?
+**Answer:** Class loader first delegates loading to parent before attempting to load itself. Ensures core classes loaded by bootstrap loader.
+
+### 267. What are memory areas in JVM?
+**Answer:**
+- **Method Area:** Class-level data, static variables
+- **Heap:** Object instances
+- **Stack:** Method calls, local variables
+- **PC Register:** Current instruction pointer
+- **Native Method Stack:** Native method calls
+
+### 268. What is heap memory?
+**Answer:** Runtime data area where objects are allocated. Divided into Young Generation and Old Generation for garbage collection optimization.
+
+### 269. What is stack memory?
+**Answer:** Thread-specific memory storing method calls, local variables, partial results. LIFO structure, automatic memory management.
+
+### 270. What is the difference between heap and stack memory?
+**Answer:**
+- **Heap:** Objects, shared among threads, garbage collected, slower access
+- **Stack:** Method calls/local variables, thread-specific, automatic cleanup, faster access
+
+### 271. What is method area?
+**Answer:** Shared memory area storing class-level information: class metadata, static variables, constant pool, method bytecode.
+
+### 272. What is constant pool?
+**Answer:** Per-class runtime representation of constants: literals, symbolic references to types, fields, methods.
+
+### 273. What are generations in heap?
+**Answer:**
+- **Young Generation:** Eden, Survivor spaces (S0, S1)
+- **Old Generation:** Long-lived objects
+- **Permanent Generation:** Class metadata (removed in Java 8)
+
+### 274. What is garbage collection?
+**Answer:** Automatic memory management reclaiming memory occupied by unreachable objects. Frees developers from manual memory management.
+
+### 275. What are the types of garbage collectors?
+**Answer:** Serial, Parallel, CMS (Concurrent Mark Sweep), G1, ZGC, Shenandoah. Each optimized for different scenarios.
+
+### 276. How does garbage collection work?
+**Answer:** Mark (identify unreachable objects) → Sweep (deallocate memory) → Compact (defragmentation). Generational collection optimizes based on object age.
+
+### 277. What is generational garbage collection?
+**Answer:** Strategy based on observation that most objects die young. Young generation collected frequently, old generation less frequently.
+
+### 278. What triggers garbage collection?
+**Answer:** Heap memory shortage, explicit System.gc() call (not guaranteed), generation-specific thresholds.
+
+### 279. What are strong, weak, soft, and phantom references?
+**Answer:**
+- **Strong:** Normal references, prevent GC
+- **Weak:** Don't prevent GC, cleared when GC runs
+- **Soft:** Cleared when memory low
+- **Phantom:** Already cleared, used for cleanup actions
+
+### 280. What is memory leak in Java?
+**Answer:** Objects no longer needed but still referenced, preventing garbage collection. Common causes: listeners, static collections, unclosed resources.
+
+### 281. How to detect memory leaks?
+**Answer:** Profiling tools (JProfiler, VisualVM), heap dumps, monitoring memory usage patterns, OutOfMemoryError analysis.
+
+### 282. What is OutOfMemoryError?
+**Answer:** Error thrown when JVM cannot allocate object due to insufficient memory and garbage collection cannot free space.
+
+### 283. What are different types of OutOfMemoryError?
+**Answer:**
+- **Java heap space:** Insufficient heap memory
+- **PermGen space:** Class metadata space full (Java 7)
+- **Metaspace:** Class metadata space full (Java 8+)
+- **Direct buffer memory:** Off-heap memory exhausted
+
+### 284. What is JIT (Just-In-Time) compiler?
+**Answer:** Component optimizing bytecode to native machine code at runtime. Improves performance by compiling frequently used code.
+
+### 285. What are JVM tuning parameters?
+**Answer:**
+- **-Xms:** Initial heap size
+- **-Xmx:** Maximum heap size
+- **-XX:NewRatio:** Ratio of old to young generation
+- **-XX:+UseG1GC:** Enable G1 garbage collector
+
+### 286. What is metaspace?
+**Answer:** Native memory area storing class metadata in Java 8+. Replaces PermGen, automatically sized, can cause OutOfMemoryError.
+
+### 287. What is the difference between PermGen and Metaspace?
+**Answer:**
+- **PermGen:** Fixed size, part of heap, Java 7 and earlier
+- **Metaspace:** Dynamic size, native memory, Java 8+
+
+### 288. What are JVM monitoring tools?
+**Answer:** JConsole, VisualVM, JProfiler, MAT (Memory Analyzer Tool), JVM command-line tools (jstat, jmap, jstack).
+
+### 289. What is heap dump?
+**Answer:** Snapshot of heap memory at specific time, containing all objects and references. Used for memory leak analysis.
+
+### 290. What are the factors affecting garbage collection performance?
+**Answer:** Heap size, GC algorithm, object allocation patterns, application threading model, available CPU cores.
+
+---
+
+## Java 8+ Features (291-330)
+
+### 291. What are the key features introduced in Java 8?
+**Answer:** Lambda expressions, Stream API, Optional class, default methods in interfaces, method references, functional interfaces, new Date/Time API.
+
+### 292. What are lambda expressions?
+**Answer:** Anonymous functions enabling functional programming style. Concise way to represent instances of functional interfaces.
+
+### 293. What is the syntax of lambda expressions?
+**Answer:**
+```java
+(parameters) -> expression
+(parameters) -> { statements; }
+// Examples:
+x -> x * 2
+(x, y) -> x + y
+() -> System.out.println("Hello")
+```
+
+### 294. What are functional interfaces?
+**Answer:** Interfaces with exactly one abstract method. Can have default and static methods. Used as target types for lambda expressions.
+
+### 295. What is @FunctionalInterface annotation?
+**Answer:** Annotation ensuring interface is functional interface. Compiler error if interface has more than one abstract method.
+
+### 296. What are predefined functional interfaces in Java 8?
+**Answer:**
+- **Predicate<T>:** test(T) → boolean
+- **Function<T,R>:** apply(T) → R
+- **Consumer<T>:** accept(T) → void
+- **Supplier<T>:** get() → T
+
+### 297. What are method references?
+**Answer:** Shorthand for lambda expressions that call specific method. Types: static, instance, constructor references.
+
+### 298. What are types of method references?
+**Answer:**
+- **Static:** ClassName::methodName
+- **Instance:** instance::methodName
+- **Constructor:** ClassName::new
+- **Instance of arbitrary object:** ClassName::methodName
+
+### 299. What is Stream API?
+**Answer:** Functional programming API for processing collections of objects. Enables declarative programming with operations like filter, map, reduce.
+
+### 300. What are the characteristics of streams?
+**Answer:** Not data structure, functional in nature, lazy evaluation, possibly unbounded, consumable only once.
+
+### 301. What is the difference between intermediate and terminal operations?
+**Answer:**
+- **Intermediate:** Return stream, lazy (filter, map, sorted)
+- **Terminal:** Produce result, trigger processing (collect, forEach, reduce)
+
+### 302. What are common intermediate stream operations?
+**Answer:** filter(), map(), flatMap(), distinct(), sorted(), limit(), skip(), peek().
+
+### 303. What are common terminal stream operations?
+**Answer:** collect(), forEach(), reduce(), count(), min(), max(), anyMatch(), allMatch(), noneMatch(), findFirst(), findAny().
+
+### 304. What is Optional class?
+**Answer:** Container object that may or may not contain value. Helps avoid NullPointerException and explicit null checks.
+
+### 305. What are common Optional methods?
+**Answer:** of(), empty(), ofNullable(), isPresent(), isEmpty(), get(), orElse(), orElseGet(), orElseThrow(), ifPresent(), map(), filter().
+
+### 306. What are default methods in interfaces?
+**Answer:** Methods with default implementation in interfaces using 'default' keyword. Allows adding methods without breaking existing implementations.
+
+### 307. What are static methods in interfaces?
+**Answer:** Static methods in interfaces that belong to interface, not implementing class. Cannot be overridden.
+
+### 308. What is the diamond problem with default methods?
+**Answer:** Ambiguity when class implements multiple interfaces with same default method. Resolved by explicit override or super call.
+
+### 309. What is the new Date and Time API in Java 8?
+**Answer:** java.time package providing immutable, thread-safe date/time classes: LocalDate, LocalTime, LocalDateTime, ZonedDateTime.
+
+### 310. What are the main classes in java.time package?
+**Answer:**
+- **LocalDate:** Date without time zone
+- **LocalTime:** Time without date/time zone
+- **LocalDateTime:** Date and time without time zone
+- **ZonedDateTime:** Date and time with time zone
+- **Instant:** Point in time
+
+### 311. What is the difference between Date and LocalDate?
+**Answer:**
+- **Date:** Mutable, not thread-safe, includes time zone
+- **LocalDate:** Immutable, thread-safe, no time zone, better API
+
+### 312. What are collectors in Stream API?
+**Answer:** Utility class providing common reduction operations: toList(), toSet(), toMap(), groupingBy(), partitioningBy().
+
+### 313. What is parallel stream?
+**Answer:** Stream that can be processed in parallel using multiple threads. Created using parallelStream() method or parallel().
+
+### 314. When to use parallel streams?
+**Answer:** Large datasets, CPU-intensive operations, sufficient CPU cores available. Avoid for small datasets or I/O operations.
+
+### 315. What are the features introduced in Java 9?
+**Answer:** Module system (Jigsaw), private methods in interfaces, try-with-resources improvements, diamond operator enhancements, Stream API enhancements.
+
+### 316. What is the module system in Java 9?
+**Answer:** Platform module system providing strong encapsulation and explicit dependencies. Defined in module-info.java file.
+
+### 317. What are private methods in interfaces (Java 9)?
+**Answer:** Private methods in interfaces to share code between default methods. Cannot be inherited or overridden.
+
+### 318. What are the features introduced in Java 10?
+**Answer:** Local variable type inference (var keyword), application class-data sharing, garbage collector improvements.
+
+### 319. What is var keyword in Java 10?
+**Answer:** Local variable type inference allowing compiler to infer type from right-hand side. Only for local variables.
+
+### 320. What are the features introduced in Java 11?
+**Answer:** String methods enhancements, HTTP Client API, single-file source-code programs, lambda parameter syntax improvements.
+
+### 321. What are new String methods in Java 11?
+**Answer:** isBlank(), lines(), strip(), stripLeading(), stripTrailing(), repeat().
+
+### 322. What is HTTP Client API in Java 11?
+**Answer:** Standard HTTP client supporting HTTP/1.1 and HTTP/2, synchronous and asynchronous programming models.
+
+### 323. What are the features introduced in Java 14?
+**Answer:** Switch expressions (standard), text blocks (preview), helpful NullPointerExceptions, pattern matching for instanceof (preview).
+
+### 324. What are switch expressions?
+**Answer:** Switch as expression returning value, using arrow syntax, exhaustive matching required.
+
+### 325. What are text blocks?
+**Answer:** Multi-line string literals using triple quotes, preserving formatting, reducing escape sequences.
+
+### 326. What are the features introduced in Java 15?
+**Answer:** Text blocks (standard), sealed classes (preview), hidden classes, ZGC and Shenandoah improvements.
+
+### 327. What are sealed classes?
+**Answer:** Classes/interfaces restricting which classes can extend/implement them using 'sealed' keyword and 'permits' clause.
+
+### 328. What are the features introduced in Java 17?
+**Answer:** Sealed classes (standard), pattern matching for switch (preview), strong encapsulation of JDK internals.
+
+### 329. What are records in Java?
+**Answer:** Immutable data carriers with automatically generated constructor, accessors, equals(), hashCode(), toString().
+
+### 330. What is pattern matching?
+**Answer:** Language feature allowing testing and extracting data from objects in single operation, making code more concise.
+
+## Advanced Java Topics (371-420) - Continued
+
+### 394. What are type erasure and raw types?
+**Answer:** 
+- **Type erasure:** Generic type information removed at runtime for backward compatibility
+- **Raw types:** Generic classes used without type parameters (legacy compatibility)
+
+### 395. What are wildcards in generics?
+**Answer:** 
+- **? extends T:** Upper bounded wildcard (covariance)
+- **? super T:** Lower bounded wildcard (contravariance)
+- **?:** Unbounded wildcard
+
+### 396. What is PECS principle?
+**Answer:** Producer Extends, Consumer Super. Use extends for reading data, super for writing data.
+
+### 397. What are bounded type parameters?
+**Answer:** Restricting type parameters to specific types using extends keyword: `<T extends Number>`.
+
+### 398. What is type inference in generics?
+**Answer:** Compiler automatically determining generic types from context (diamond operator <> in Java 7+).
+
+### 399. What is classpath and how does it work?
+**Answer:** Path where JVM searches for class files and libraries. Set via -cp flag or CLASSPATH environment variable.
+
+### 400. What are JAR files?
+**Answer:** Java Archive files packaging multiple classes, resources into single compressed file. Executable with Main-Class manifest attribute.
+
+### 401. What is WAR file?
+**Answer:** Web Application Archive containing web application components: servlets, JSPs, HTML, libraries.
+
+### 402. What is EAR file?
+**Answer:** Enterprise Application Archive containing multiple modules (WAR, JAR files) for enterprise applications.
+
+### 403. What is manifest file in JAR?
+**Answer:** META-INF/MANIFEST.MF file containing metadata about JAR: Main-Class, Class-Path, version information.
+
+### 404. What is Java Native Interface (JNI)?
+**Answer:** Framework allowing Java code to call native applications and libraries written in C/C++.
+
+### 405. When to use JNI?
+**Answer:** Platform-specific functionality, performance-critical operations, legacy system integration, hardware access.
+
+### 406. What are the disadvantages of JNI?
+**Answer:** Platform dependency, security risks, debugging complexity, potential memory leaks, JVM crashes.
+
+### 407. What is RMI (Remote Method Invocation)?
+**Answer:** Java mechanism allowing objects in different JVMs to invoke methods on each other.
+
+### 408. What are the components of RMI?
+**Answer:** Remote interface, remote object implementation, RMI registry, client stub, server skeleton.
+
+### 409. What is CORBA?
+**Answer:** Common Object Request Broker Architecture for distributed computing across different languages/platforms.
+
+### 410. What is the difference between RMI and CORBA?
+**Answer:**
+- **RMI:** Java-specific, simpler, better Java integration
+- **CORBA:** Language-independent, more complex, cross-platform
+
+### 411. What is aspect-oriented programming (AOP)?
+**Answer:** Programming paradigm separating cross-cutting concerns (logging, security) from business logic.
+
+### 412. What are the key concepts in AOP?
+**Answer:** Aspect, Join point, Pointcut, Advice (before, after, around), Weaving.
+
+### 413. What is bytecode manipulation?
+**Answer:** Modifying Java bytecode at runtime or compile-time. Libraries: ASM, Javassist, ByteBuddy.
+
+### 414. What are Java agents?
+**Answer:** Programs modifying bytecode at JVM startup or runtime. Used for profiling, monitoring, AOP.
+
+### 415. What is instrumentation in Java?
+**Answer:** Modifying bytecode of loaded classes. Used for profiling, monitoring, debugging tools.
+
+### 416. What is ClassLoader and how does it work?
+**Answer:** Loads class files into JVM memory. Hierarchy: Bootstrap → Extension/Platform → Application → Custom.
+
+### 417. How to create custom ClassLoader?
+**Answer:** Extend ClassLoader class, override findClass() method, implement class loading logic.
+
+### 418. What is dynamic proxy?
+**Answer:** Creating proxy objects at runtime implementing interfaces. Used in frameworks for AOP, lazy loading.
+
+### 419. What is the difference between static and dynamic proxy?
+**Answer:**
+- **Static:** Proxy created at compile-time, one proxy per interface
+- **Dynamic:** Proxy created at runtime, single proxy for multiple interfaces
+
+### 420. What is cglib proxy?
+**Answer:** Code Generation Library creating proxies by extending classes at runtime (not just interfaces).
+
+---
+
+## Data Structures & Algorithms (421-470)
+
+### 421. What are the basic data structures in Java?
+**Answer:** Array, LinkedList, Stack, Queue, Tree, Graph, Hash Table, Heap.
+
+### 422. What is time complexity?
+**Answer:** Measure of algorithm's running time relative to input size. Expressed in Big O notation.
+
+### 423. What is space complexity?
+**Answer:** Measure of algorithm's memory usage relative to input size.
+
+### 424. What are common time complexities?
+**Answer:** O(1) constant, O(log n) logarithmic, O(n) linear, O(n log n) linearithmic, O(n²) quadratic, O(2ⁿ) exponential.
+
+### 425. What is the difference between Array and ArrayList time complexity?
+**Answer:**
+- **Array:** Access O(1), Search O(n), Insert/Delete O(n)
+- **ArrayList:** Similar to array, but dynamic resizing
+
+### 426. What are the time complexities of LinkedList operations?
+**Answer:** Access O(n), Search O(n), Insert/Delete at known position O(1), Insert/Delete by value O(n).
+
+### 427. What are the time complexities of HashMap operations?
+**Answer:** Get/Put/Remove O(1) average case, O(n) worst case (all keys hash to same bucket).
+
+### 428. What are the time complexities of TreeMap operations?
+**Answer:** Get/Put/Remove O(log n) - balanced binary search tree operations.
+
+### 429. What is binary search?
+**Answer:** Efficient search algorithm for sorted arrays. Divides search space in half each iteration. O(log n) complexity.
+
+### 430. Implement binary search algorithm.
+**Answer:**
+```java
+public static int binarySearch(int[] arr, int target) {
+    int left = 0, right = arr.length - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] < target) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+}
+```
+
+### 431. What are sorting algorithms and their complexities?
+**Answer:**
+- **Bubble Sort:** O(n²) - simple but inefficient
+- **Selection Sort:** O(n²) - finds minimum and swaps
+- **Insertion Sort:** O(n²) - builds sorted array one element at a time
+- **Merge Sort:** O(n log n) - divide and conquer
+- **Quick Sort:** O(n log n) average, O(n²) worst case
+- **Heap Sort:** O(n log n) - uses binary heap
+
+### 432. Implement merge sort algorithm.
+**Answer:**
+```java
+public static void mergeSort(int[] arr, int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+        merge(arr, left, mid, right);
+    }
+}
+```
+
+### 433. What is the difference between stable and unstable sorting?
+**Answer:**
+- **Stable:** Maintains relative order of equal elements (Merge Sort, Bubble Sort)
+- **Unstable:** May change relative order of equal elements (Quick Sort, Heap Sort)
+
+### 434. What is a stack and its applications?
+**Answer:** LIFO data structure. Applications: function calls, expression evaluation, undo operations, browser history.
+
+### 435. What is a queue and its applications?
+**Answer:** FIFO data structure. Applications: task scheduling, breadth-first search, handling requests.
+
+### 436. What are the types of queues?
+**Answer:** Simple Queue, Circular Queue, Priority Queue, Deque (Double-ended Queue).
+
+### 437. What is a binary tree?
+**Answer:** Tree data structure where each node has at most two children: left child and right child.
+
+### 438. What are binary tree traversals?
+**Answer:**
+- **Inorder:** Left → Root → Right
+- **Preorder:** Root → Left → Right  
+- **Postorder:** Left → Right → Root
+- **Level Order:** Breadth-first traversal
+
+### 439. What is a binary search tree (BST)?
+**Answer:** Binary tree where left subtree values < root < right subtree values. Enables efficient searching.
+
+### 440. What is a balanced binary tree?
+**Answer:** Tree where height difference between left and right subtrees is at most 1 for all nodes.
+
+### 441. What is AVL tree?
+**Answer:** Self-balancing BST where height difference between subtrees is at most 1. Rotations maintain balance.
+
+### 442. What is Red-Black tree?
+**Answer:** Self-balancing BST with color properties ensuring O(log n) operations. Used in TreeMap, TreeSet.
+
+### 443. What is a heap?
+**Answer:** Complete binary tree satisfying heap property. Max heap: parent ≥ children. Min heap: parent ≤ children.
+
+### 444. What are heap operations and their complexities?
+**Answer:** Insert O(log n), Delete O(log n), Get min/max O(1), Build heap O(n).
+
+### 445. What is heap sort algorithm?
+**Answer:** Sorting algorithm using binary heap. Build max heap, repeatedly extract maximum. O(n log n) complexity.
+
+### 446. What is a graph?
+**Answer:** Collection of vertices connected by edges. Types: directed/undirected, weighted/unweighted, cyclic/acyclic.
+
+### 447. What are graph representations?
+**Answer:**
+- **Adjacency Matrix:** 2D array, O(V²) space, O(1) edge lookup
+- **Adjacency List:** Array of lists, O(V+E) space, O(V) edge lookup
+
+### 448. What is breadth-first search (BFS)?
+**Answer:** Graph traversal exploring all vertices at current depth before moving to next depth. Uses queue.
+
+### 449. What is depth-first search (DFS)?
+**Answer:** Graph traversal exploring as far as possible before backtracking. Uses stack or recursion.
+
+### 450. What are applications of BFS and DFS?
+**Answer:**
+- **BFS:** Shortest path in unweighted graph, level-order traversal
+- **DFS:** Topological sorting, cycle detection, pathfinding
+
+### 451. What is Dijkstra's algorithm?
+**Answer:** Finds shortest path from source to all vertices in weighted graph with non-negative weights.
+
+### 452. What is dynamic programming?
+**Answer:** Optimization technique solving problems by breaking into overlapping subproblems and storing results.
+
+### 453. What are the characteristics of dynamic programming problems?
+**Answer:** Optimal substructure and overlapping subproblems. Examples: Fibonacci, coin change, knapsack.
+
+### 454. What is memoization vs tabulation?
+**Answer:**
+- **Memoization:** Top-down approach, recursive with caching
+- **Tabulation:** Bottom-up approach, iterative table filling
+
+### 455. What is greedy algorithm?
+**Answer:** Makes locally optimal choice at each step hoping to find global optimum. Examples: activity selection, Huffman coding.
+
+### 456. What is backtracking?
+**Answer:** Algorithmic approach trying all possibilities and backtracking when solution not possible. Examples: N-Queens, Sudoku.
+
+### 457. What is divide and conquer?
+**Answer:** Breaking problem into smaller subproblems, solving recursively, combining results. Examples: merge sort, quick sort.
+
+### 458. What is hashing?
+**Answer:** Technique mapping keys to array indices using hash function for fast data retrieval.
+
+### 459. What are collision resolution techniques?
+**Answer:**
+- **Chaining:** Store multiple elements in linked list at same index
+- **Open Addressing:** Find alternative location (linear probing, quadratic probing, double hashing)
+
+### 460. What is load factor in hashing?
+**Answer:** Ratio of number of elements to hash table size. Affects performance - higher load factor means more collisions.
+
+### 461. What is trie data structure?
+**Answer:** Tree-like structure storing strings character by character. Efficient for prefix matching, autocomplete.
+
+### 462. What are trie applications?
+**Answer:** Autocomplete, spell checkers, IP routing, string matching, dictionary implementations.
+
+### 463. What is union-find (disjoint set)?
+**Answer:** Data structure tracking set of elements partitioned into disjoint subsets. Supports union and find operations.
+
+### 464. What are applications of union-find?
+**Answer:** Kruskal's MST algorithm, cycle detection in undirected graphs, connected components.
+
+### 465. What is minimum spanning tree (MST)?
+**Answer:** Spanning tree of weighted graph with minimum total edge weight. Algorithms: Kruskal's, Prim's.
+
+### 466. What is topological sorting?
+**Answer:** Linear ordering of vertices in directed acyclic graph where vertex comes before all vertices it points to.
+
+### 467. What is the difference between comparison-based and non-comparison sorting?
+**Answer:**
+- **Comparison-based:** Compare elements (merge sort, quick sort) - O(n log n) lower bound
+- **Non-comparison:** Use element properties (counting sort, radix sort) - can be O(n)
+
+### 468. What is counting sort?
+**Answer:** Non-comparison sorting for integers in small range. Counts occurrences, reconstructs sorted array. O(n+k) complexity.
+
+### 469. What is radix sort?
+**Answer:** Non-comparison sorting processing digits from least to most significant. Uses stable sorting (counting sort) for each digit.
+
+### 470. What are space-time tradeoffs in algorithms?
+**Answer:** Using extra space to reduce time complexity or vice versa. Examples: memoization, lookup tables, preprocessing.
+
+---
+
+## Best Practices & Code Quality (471-520)
+
+### 471. What are SOLID principles?
+**Answer:**
+- **S**ingle Responsibility: Class should have one reason to change
+- **O**pen/Closed: Open for extension, closed for modification
+- **L**iskov Substitution: Subtypes must be substitutable for base types
+- **I**nterface Segregation: Clients shouldn't depend on unused interfaces
+- **D**ependency Inversion: Depend on abstractions, not concretions
+
+### 472. What is single responsibility principle?
+**Answer:** Class should have only one reason to change, focusing on single functionality or responsibility.
+
+### 473. What is open/closed principle?
+**Answer:** Software entities should be open for extension but closed for modification. Achieve through inheritance, interfaces.
+
+### 474. What is Liskov substitution principle?
+**Answer:** Objects of superclass should be replaceable with objects of subclass without affecting program correctness.
+
+### 475. What is interface segregation principle?
+**Answer:** No client should be forced to depend on methods it doesn't use. Create specific, focused interfaces.
+
+### 476. What is dependency inversion principle?
+**Answer:** High-level modules shouldn't depend on low-level modules. Both should depend on abstractions.
+
+### 477. What are clean code principles?
+**Answer:** Meaningful names, small functions, single responsibility, minimal comments, consistent formatting, error handling.
+
+### 478. What makes code readable?
+**Answer:** Clear naming, consistent style, proper indentation, logical structure, appropriate comments, small methods.
+
+### 479. What are code smells?
+**Answer:** Indicators of poor design: long methods, large classes, duplicate code, long parameter lists, inappropriate intimacy.
+
+### 480. What is refactoring?
+**Answer:** Improving code structure without changing external behavior. Extract methods, rename variables, eliminate duplication.
+
+### 481. What are Java naming conventions?
+**Answer:**
+- **Classes/Interfaces:** PascalCase (MyClass)
+- **Methods/Variables:** camelCase (myMethod)
+- **Constants:** UPPER_CASE (MAX_SIZE)
+- **Packages:** lowercase (com.example.project)
+
+### 482. What are effective Java practices?
+**Answer:** Use builder pattern, override hashCode with equals, prefer composition over inheritance, use enums for constants.
+
+### 483. When to use checked vs unchecked exceptions?
+**Answer:**
+- **Checked:** Recoverable conditions client can handle
+- **Unchecked:** Programming errors, runtime problems
+
+### 484. What are best practices for exception handling?
+**Answer:** Be specific, don't catch and ignore, clean up resources, don't use exceptions for control flow.
+
+### 485. What is defensive programming?
+**Answer:** Writing code that continues to function despite unexpected usage. Validate inputs, check preconditions.
+
+### 486. What are immutable objects benefits?
+**Answer:** Thread safety, simplicity, caching hashcode, safe sharing, reduced bugs.
+
+### 487. How to create immutable classes?
+**Answer:** Final class, private final fields, no setters, defensive copying for mutable fields, no methods modifying state.
+
+### 488. What is fail-fast vs fail-safe design?
+**Answer:**
+- **Fail-fast:** Detect problems early, fail immediately
+- **Fail-safe:** Continue operation despite failures with degraded functionality
+
+### 489. What are Java documentation best practices?
+**Answer:** Use Javadoc, document public APIs, explain why not just what, include examples, keep documentation updated.
+
+### 490. What is test-driven development (TDD)?
+**Answer:** Development approach: write test first, make it pass, refactor. Red-Green-Refactor cycle.
+
+### 491. What are the benefits of TDD?
+**Answer:** Better design, comprehensive tests, faster debugging, confidence in refactoring, living documentation.
+
+### 492. What are types of testing?
+**Answer:** Unit testing, integration testing, system testing, acceptance testing, regression testing, performance testing.
+
+### 493. What is JUnit?
+**Answer:** Popular Java testing framework providing annotations, assertions, test runners for unit testing.
+
+### 494. What are JUnit annotations?
+**Answer:** @Test, @Before/@BeforeEach, @After/@AfterEach, @BeforeClass/@BeforeAll, @AfterClass/@AfterAll, @Ignore.
+
+### 495. What is mocking in testing?
+**Answer:** Creating fake objects simulating real dependencies' behavior. Frameworks: Mockito, PowerMock, EasyMock.
+
+### 496. What are code coverage metrics?
+**Answer:** Measure how much code is tested: line coverage, branch coverage, method coverage, class coverage.
+
+### 497. What is continuous integration?
+**Answer:** Development practice of frequently integrating code changes, automatically building and testing.
+
+### 498. What are static code analysis tools?
+**Answer:** Tools analyzing code without execution: SonarQube, Checkstyle, PMD, FindBugs/SpotBugs.
+
+### 499. What is code review best practices?
+**Answer:** Review small changes, focus on logic and design, be constructive, use checklists, automate what possible.
+
+### 500. What is technical debt?
+**Answer:** Cost of choosing easy solution now instead of better approach. Accumulates over time, requires refactoring.
+
+### 501. What are performance optimization techniques?
+**Answer:** Profile first, optimize algorithms, minimize object creation, use appropriate data structures, cache results.
+
+### 502. What are memory optimization techniques?
+**Answer:** Avoid memory leaks, use object pools sparingly, minimize object size, use primitive collections when possible.
+
+### 503. What is profiling?
+**Answer:** Analyzing program performance, memory usage, method call frequency. Tools: JProfiler, VisualVM, JConsole.
+
+### 504. What are logging best practices?
+**Answer:** Use appropriate log levels, structured logging, avoid logging sensitive data, use parameterized messages.
+
+### 505. What are Java logging frameworks?
+**Answer:** java.util.logging (JUL), Log4j, SLF4J, Logback. SLF4J as facade is recommended.
+
+### 506. What is the difference between System.out.println and logging?
+**Answer:**
+- **System.out:** Direct console output, no levels, not configurable
+- **Logging:** Configurable levels, multiple appenders, structured format
+
+### 507. What are design principles for APIs?
+**Answer:** Consistency, simplicity, clear naming, minimal surface area, fail-fast, immutable objects.
+
+### 508. What is API versioning?
+**Answer:** Managing changes to APIs while maintaining backward compatibility. Strategies: URL versioning, header versioning.
+
+### 509. What are security best practices in Java?
+**Answer:** Validate inputs, avoid SQL injection, use parameterized queries, encrypt sensitive data, principle of least privilege.
+
+### 510. What is input validation?
+**Answer:** Checking user input for correctness, completeness, security. Validate on server side, sanitize inputs.
+
+### 511. What are common security vulnerabilities?
+**Answer:** SQL injection, XSS, CSRF, insecure deserialization, path traversal, weak authentication.
+
+### 512. What is the principle of least privilege?
+**Answer:** Give users/processes minimum access rights needed to perform their function.
+
+### 513. What are Java security features?
+**Answer:** Security Manager, access control, cryptography APIs, secure random number generation, SSL/TLS support.
+
+### 514. What is secure coding?
+**Answer:** Writing code resistant to security vulnerabilities. Validate inputs, handle errors securely, encrypt data.
+
+### 515. What are deployment best practices?
+**Answer:** Automate deployments, use configuration management, health checks, rollback procedures, blue-green deployment.
+
+### 516. What is configuration management?
+**Answer:** Managing application settings externally. Use property files, environment variables, configuration servers.
+
+### 517. What are monitoring and alerting best practices?
+**Answer:** Monitor key metrics, set up alerts for anomalies, use dashboards, log important events, track SLAs.
+
+### 518. What is scalability?
+**Answer:** System's ability to handle increased load. Types: vertical (scale up) vs horizontal (scale out) scaling.
+
+### 519. What are scalability patterns?
+**Answer:** Load balancing, caching, database sharding, microservices, asynchronous processing, CDN usage.
+
+### 520. What is maintainable code?
+**Answer:** Code that is easy to understand, modify, and extend. Clear structure, good documentation, consistent style.
+
+---
+
+## Spring Framework (521-570)
+
+### 521. What is Spring Framework?
+**Answer:** Comprehensive Java framework providing infrastructure support for developing Java applications. Features: IoC, AOP, MVC, security.
+
+### 522. What are the core modules of Spring?
+**Answer:** Core Container, Data Access/Integration, Web, AOP, Instrumentation, Messaging, Test.
+
+### 523. What is Inversion of Control (IoC)?
+**Answer:** Design principle where control of object creation and dependency management is transferred to framework.
+
+### 524. What is Dependency Injection?
+**Answer:** IoC technique providing dependencies from external source rather than object creating them internally.
+
+### 525. What are types of dependency injection in Spring?
+**Answer:** Constructor injection, setter injection, field injection. Constructor injection is recommended.
+
+### 526. What is Spring IoC container?
+**Answer:** Core of Spring framework managing object lifecycle and dependencies. Types: BeanFactory, ApplicationContext.
+
+### 527. What is the difference between BeanFactory and ApplicationContext?
+**Answer:**
+- **BeanFactory:** Basic container, lazy loading, minimal features
+- **ApplicationContext:** Advanced container, eager loading, additional features (AOP, i18n, events)
+
+### 528. What is a Spring bean?
+**Answer:** Object managed by Spring IoC container. Configured via XML, annotations, or Java configuration.
+
+### 529. What are bean scopes in Spring?
+**Answer:** Singleton (default), prototype, request, session, application, websocket.
+
+### 530. What is the difference between singleton and prototype scope?
+**Answer:**
+- **Singleton:** One instance per container, shared across application
+- **Prototype:** New instance created for each request
+
+### 531. What are Spring annotations?
+**Answer:** @Component, @Service, @Repository, @Controller, @Autowired, @Qualifier, @Value, @Configuration.
+
+### 532. What is @Autowired annotation?
+**Answer:** Enables automatic dependency injection by type. Can be applied to fields, methods, constructors.
+
+### 533. What is @Qualifier annotation?
+**Answer:** Used with @Autowired when multiple beans of same type exist, specifies which bean to inject.
+
+### 534. What are stereotype annotations?
+**Answer:** @Component (generic), @Service (business logic), @Repository (data access), @Controller (web layer).
+
+### 535. What is @Configuration annotation?
+**Answer:** Indicates class contains Spring bean definitions. Used with @Bean methods for Java-based configuration.
+
+### 536. What is Spring Boot?
+**Answer:** Opinionated framework building on Spring, providing auto-configuration, embedded servers, production-ready features.
+
+### 537. What are advantages of Spring Boot?
+**Answer:** Auto-configuration, embedded servers, starter dependencies, production-ready features, minimal configuration.
+
+### 538. What are Spring Boot starters?
+**Answer:** Dependency descriptors providing convenient dependency management. Examples: spring-boot-starter-web, spring-boot-starter-data-jpa.
+
+### 539. What is auto-configuration in Spring Boot?
+**Answer:** Automatic configuration based on classpath dependencies and defined beans. Reduces boilerplate configuration.
+
+### 540. What is @SpringBootApplication annotation?
+**Answer:** Combines @Configuration, @EnableAutoConfiguration, @ComponentScan. Main annotation for Spring Boot applications.
+
+### 541. What is Spring MVC?
+**Answer:** Web framework implementing Model-View-Controller pattern. Part of Spring Framework for building web applications.
+
+### 542. What is DispatcherServlet?
+**Answer:** Front controller in Spring MVC handling all HTTP requests and routing to appropriate handlers.
+
+### 543. What are the components of Spring MVC?
+**Answer:** DispatcherServlet, HandlerMapping, HandlerAdapter, ViewResolver, Model, View, Controller.
+
+### 544. What is @Controller annotation?
+**Answer:** Marks class as Spring MVC controller. Methods handle HTTP requests and return view names or response bodies.
+
+### 545. What is @RestController annotation?
+**Answer:** Combines @Controller and @ResponseBody. Returns data directly as HTTP response body (JSON/XML).
+
+### 546. What are request mapping annotations?
+**Answer:** @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @PatchMapping.
+
+### 547. What is @RequestParam vs @PathVariable?
+**Answer:**
+- **@RequestParam:** Extracts query parameters or form data
+- **@PathVariable:** Extracts values from URI path
+
+### 548. What is @RequestBody and @ResponseBody?
+**Answer:**
+- **@RequestBody:** Binds HTTP request body to method parameter
+- **@ResponseBody:** Writes return value directly to HTTP response body
+
+### 549. What is Spring Data JPA?
+**Answer:** Spring module simplifying JPA-based data access. Provides repository abstraction, query methods.
+
+### 550. What is JpaRepository?
+**Answer:** Spring Data interface extending PagingAndSortingRepository with JPA-specific methods like flush(), saveAndFlush().
+
+### 551. What are query methods in Spring Data JPA?
+**Answer:** Methods derived from method names: findByFirstName, findByLastNameAndFirstName, findByAgeGreaterThan.
+
+### 552. What is @Query annotation?
+**Answer:** Allows custom JPQL or native SQL queries in Spring Data JPA repository methods.
+
+### 553. What is Spring Security?
+**Answer:** Comprehensive security framework providing authentication, authorization, protection against common attacks.
+
+### 554. What are the core concepts in Spring Security?
+**Answer:** Authentication, authorization, principal, authorities, security context, security filter chain.
+
+### 555. What is authentication vs authorization?
+**Answer:**
+- **Authentication:** Verifying user identity (who you are)
+- **Authorization:** Granting permissions (what you can do)
+
+### 556. What is @PreAuthorize and @PostAuthorize?
+**Answer:**
+- **@PreAuthorize:** Method-level security check before method execution
+- **@PostAuthorize:** Security check after method execution, can access return value
+
+### 557. What is Spring AOP?
+**Answer:** Aspect-Oriented Programming support in Spring enabling separation of cross-cutting concerns.
+
+### 558. What are the key concepts in Spring AOP?
+**Answer:** Aspect, Join point, Pointcut, Advice, Weaving, Target object, Proxy.
+
+### 559. What are types of advice in Spring AOP?
+**Answer:** @Before, @After, @AfterReturning, @AfterThrowing, @Around.
+
+### 560. What is @Transactional annotation?
+**Answer:** Declarative transaction management. Automatically handles transaction begin, commit, rollback.
+
+### 561. What are transaction propagation types?
+**Answer:** REQUIRED, REQUIRES_NEW, SUPPORTS, NOT_SUPPORTED, MANDATORY, NEVER, NESTED.
+
+### 562. What are transaction isolation levels?
+**Answer:** DEFAULT, READ_UNCOMMITTED, READ_COMMITTED, REPEATABLE_READ, SERIALIZABLE.
+
+### 563. What is Spring Boot Actuator?
+**Answer:** Production-ready features for monitoring and managing applications. Endpoints: health, metrics, info.
+
+### 564. What are common actuator endpoints?
+**Answer:** /health, /info, /metrics, /env, /beans, /mappings, /configprops, /loggers.
+
+### 565. What is application.properties vs application.yml?
+**Answer:** Configuration files for Spring Boot. .properties uses key=value format, .yml uses hierarchical structure.
+
+### 566. What are profiles in Spring Boot?
+**Answer:** Way to segregate application configuration for different environments (dev, test, prod).
+
+### 567. What is @Profile annotation?
+**Answer:** Conditionally registers beans or configuration based on active profiles.
+
+### 568. What is Spring Boot Testing?
+**Answer:** Testing support with @SpringBootTest, @MockBean, @WebMvcTest, @DataJpaTest annotations.
+
+### 569. What is @MockBean vs @Mock?
+**Answer:**
+- **@MockBean:** Spring Boot annotation, replaces bean in application context
+- **@Mock:** Mockito annotation, creates mock object for testing
+
+### 570. What are best practices for Spring applications?
+**Answer:** Use constructor injection, prefer composition over inheritance, leverage Spring Boot starters, externalize configuration.
+
+---
+
+## Database & JDBC (571-600)
+
+### 571. What is JDBC?
+**Answer:** Java Database Connectivity API for connecting and executing queries against databases.
+
+### 572. What are the components of JDBC?
+**Answer:** DriverManager, Connection, Statement, PreparedStatement, CallableStatement, ResultSet.
+
+### 573. What are the steps to connect to database using JDBC?
+**Answer:** Load driver, establish connection, create statement, execute query, process results, close resources.
+
+### 574. What is the difference between Statement and PreparedStatement?
+**Answer:**
+- **Statement:** SQL executed as-is, compiled each time, SQL injection risk
+- **PreparedStatement:** Precompiled SQL, parameters safely bound, better performance
+
+### 575. What are the advantages of PreparedStatement?
+**Answer:** Prevents SQL injection, better performance (precompiled), type safety, readable code.
+
+### 576. What is CallableStatement?
+**Answer:** Interface for executing stored procedures and functions. Extends PreparedStatement.
+
+### 577. What is ResultSet in JDBC?
+**Answer:** Object representing database query results. Provides methods to navigate and extract data.
+
+### 578. What are ResultSet types?
+**Answer:** TYPE_FORWARD_ONLY (default), TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE. Determines cursor movement capabilities.
+
+### 579. What are ResultSet concurrency modes?
+**Answer:** CONCUR_READ_ONLY (default), CONCUR_UPDATABLE. Determines if ResultSet can be updated.
+
+### 580. What is connection pooling?
+**Answer:** Technique maintaining cache of database connections for reuse. Improves performance and resource management.
+
+### 581. What are popular connection pooling libraries?
+**Answer:** HikariCP, Apache Commons DBCP, C3P0, Tomcat JDBC Pool. HikariCP is most popular for performance.
+
+### 582. What is transaction in database?
+**Answer:** Unit of work that either completely succeeds or completely fails. Follows ACID properties.
+
+### 583. What are ACID properties?
+**Answer:**
+- **Atomicity:** All or nothing execution
+- **Consistency:** Database remains in valid state
+- **Isolation:** Concurrent transactions don't interfere
+- **Durability:** Committed changes persist
+
+### 584. What are transaction isolation levels?
+**Answer:**
+- **READ_UNCOMMITTED:** Dirty reads possible
+- **READ_COMMITTED:** Prevents dirty reads
+- **REPEATABLE_READ:** Prevents dirty and non-repeatable reads
+- **SERIALIZABLE:** Highest isolation, prevents all phenomena
+
+### 585. What is dirty read, phantom read, and non-repeatable read?
+**Answer:**
+- **Dirty read:** Reading uncommitted changes
+- **Non-repeatable read:** Same query returns different results
+- **Phantom read:** New rows appear between reads
+
+### 586. What is batch processing in JDBC?
+**Answer:** Executing multiple SQL statements together as single unit. Improves performance for bulk operations.
+
+### 587. How to handle large result sets efficiently?
+**Answer:** Use scrollable ResultSet, fetch size optimization, pagination, streaming, close resources properly.
+
+### 588. What are JDBC drivers and their types?
+**Answer:**
+- **Type 1:** JDBC-ODBC bridge
+- **Type 2:** Native API driver  
+- **Type 3:** Network protocol driver
+- **Type 4:** Pure Java driver (most common)
+
+### 589. What is DataSource in JDBC?
+**Answer:** Alternative to DriverManager for obtaining connections. Provides connection pooling, distributed transactions.
+
+### 590. What is the difference between execute(), executeQuery(), and executeUpdate()?
+**Answer:**
+- **execute():** Any SQL statement, returns boolean
+- **executeQuery():** SELECT statements, returns ResultSet
+- **executeUpdate():** INSERT/UPDATE/DELETE, returns row count
+
+### 591. What are best practices for JDBC?
+**Answer:** Use PreparedStatement, close resources in finally/try-with-resources, use connection pooling, handle exceptions properly.
+
+### 592. What is SQL injection and how to prevent it?
+**Answer:** Malicious SQL code injection through user input. Prevent with PreparedStatement, input validation, stored procedures.
+
+### 593. What is ORM (Object-Relational Mapping)?
+**Answer:** Technique mapping database tables to objects. Frameworks: Hibernate, JPA, MyBatis, jOOQ.
+
+### 594. What are the advantages and disadvantages of ORM?
+**Answer:**
+**Advantages:** Productivity, maintainability, database independence, caching
+**Disadvantages:** Performance overhead, complexity, learning curve, less control
+
+### 595. What is JPA (Java Persistence API)?
+**Answer:** Java specification for ORM. Provides standard way to manage relational data. Hibernate is popular implementation.
+
+### 596. What are JPA annotations?
+**Answer:** @Entity, @Table, @Id, @GeneratedValue, @Column, @OneToMany, @ManyToOne, @JoinColumn, @NamedQuery.
+
+### 597. What is the difference between save() and persist() in JPA?
+**Answer:**
+- **save():** Returns generated identifier, can be used outside transaction
+- **persist():** Void return, must be within transaction context
